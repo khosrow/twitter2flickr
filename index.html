@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>t2f - Posted Pics</title>
+		<style type="text/css">
+			#logo {
+			float:left;
+			width:auto;
+			padding:18px 0 34px 0;
+			}
+			#logo a {
+			color:#ff2b06;
+			font-size:60px;
+			font-weight:600;
+			text-decoration:none;
+			border-bottom:none;
+			letter-spacing:-4px;
+			background-color:#fff;
+			}
+			.frame {
+				display:block; 
+				width:80%; 
+				margin-left: auto; 
+				margin-right: auto;
+				font-family: Sans-Serif; 
+			}
+			table {
+				display:block; 
+				background:#fff; 
+				border:1px solid #ccc; 
+				width:100%; 
+				border-bottom-left-radius: 5px 5px; 
+				border-bottom-right-radius: 5px 5px; 
+				border-top-left-radius: 5px 5px; 
+				border-top-right-radius: 5px 5px;
+			}
+			tr.rowdiv {
+				display: table-row;	
+				background:#fff; 
+				margin: 0px ;
+			}
+			tr.highlight {
+				background: #f7f7f7;
+				maring: 0px;
+				color:#e12000;
+			}
+			a.highlight {
+				color:#e12000;
+			}
+			.celldiv {
+				float: left;
+				padding: 10px 20px; 
+				margin: 0px ;
+				display: table-cell;
+			}
+			a {
+				border-bottom:1px dotted #000;
+				text-decoration:none;
+				color:#000;
+			}
+			a:hover {
+				color:#e12000;
+				border-bottom:1px dashed #e12000;
+				background-color:#f7f7f7;
+			}
+			th {
+				margin: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="frame">
+			<div id="logo">
+				<h1><a href="">t2f</a></h1>
+			</div>
+			<table>
+				<thead>
+					<tr style="background: #eee; border: 0px; margin:0px;">
+						<th>Date</th>
+						<th>Message</th>
+						<th>Tags</th>
+					</tr>
+				</thead>
+				{% for photo in photos %}
+					<tr class="rowdiv" onMouseOver="this.className='highlight'" onMouseOut="this.className='rowdiv'">
+						<td class="celldiv">{{ photo.date }}</td>
+						<td class="celldiv">{{ photo.message }}</td>
+TODO:
+						<td class="celldiv">
+						{% for tag in tags %}
+							
+						</td>
+					</tr>
+			</table>
+		</div>
+	</body>
+</html>

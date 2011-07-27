@@ -1,0 +1,16 @@
+application: twitter2flickr
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /
+  script: t2f.py
+- url: /uploader
+  script: t2f.py
+- url: /picposter
+  script: t2f.py
+- url: /.* 
+  sciprt: 404.html
